@@ -1,0 +1,95 @@
+html, body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    in-width: 600px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.wrapper {
+  position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: black;
+}
+.nav-bar-content{
+  position: absolute;
+  min-width: 300px;
+}
+.nav-bar {
+    /*position: static;*/
+    left: 0;
+    top: 0;
+    /*height: 100vw !important;*/
+    /*width: 20%;*/
+    /*background-color: black;*/
+    /*padding: 20%;*/
+    min-width: 300px;
+}
+
+.graphic {
+    margin-left: 0 !important;
+}
+#title {
+    min-width: 220px;
+    /*top: 50%;
+    left: 50%;
+    transform: translate(-120px, -40px);*/
+    color: white;
+    z-index: 1;
+    color: none;
+    padding: 20%;
+    /*font-size: 2.5em;*/
+    font-family: "Helvetica", sans-serif;
+    font-weight: 900 !important;
+    line-height: 1.2 !important;
+}
+#title .sub-title {
+    color: white;
+    font-size: .5em;
+}
+
+.icons{
+margin-left: 50%;
+transform: translateX(-70px);
+}
+
+.link {
+  /*position:relative;*/
+    /*width: 64px;*/
+    height: 64px;
+    /*min-width: 64px;*/
+    fill:white;
+    min-width: 32px;
+    /*background-color: black;*/
+}
+
+.android{
+  min-width: 32px;
+  background-image: url("../images/android.png");
+   background-size: 32px 32px;
+  background-repeat: no-repeat;
+  /*background-origin: padding-box;*/
+  margin-top: 20px;
+  width: 64px !important;
+  height: 64px;
+}
+#mycanvas{
+  z-index: -1;
+  top: 50vh;
+  left: 50vw;
+}
+.work{
+  position: absolute;
+  color:white;
+  font-size: 3em;
+  width: 300px;
+  height: 300px;
+  padding-left: 100px;
+  top: 50vh;
+  left: 50vw;
+  right: 50vw;
+}

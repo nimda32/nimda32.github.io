@@ -68,37 +68,44 @@
 
 <script type="text/processing" data-processing-target="mycanvas">
 
+int rotY,rotY_incremental;
 void setup() {
-        size(window.innerWidth, window.innerHeight, P3D);
-        colorMode(HSB, 100, 100, 100, 100);
-        frameRate(28);
+  size(window.innerWidth, window.innerHeight, P3D);
+  colorMode(HSB, 100, 100, 100, 100);
+  frameRate(28);
+  rotY = 0;
 }
 
 void draw() {
   background(0,0,0);
   stroke(100);
 
-  pushMatrix();
+  if(frameCount % 3 == 0){
+    // rotY += 8400;
+    rotY += 9024;
+    // rotateY(radians(frameCount/60 * 1400));
+  }
     translate(width/2.7, height/2);
     scale(3);
-    rotateX(radians(frameCount/2));
-    rotateY(radians(frameCount/60 * 1400));
+    rotateX(radians(frameCount/4));
+    // rotateY(rotY_incremental++);
+  // rotateY(radians(frameCount/60 * 1400));
+  rotateY(radians(rotY));
+  rotateY(radians(rotY_incremental--/2));
+
     int numberOfTriangles = 15; //depend on time todo
-        for (int i = 0; i < numberOfTriangles; i++) {
-
-                fill(map(i % 10, 0, 10, 0, 100), 30, 100);
-                beginShape(TRIANGLE_FAN);
-                vertex(150, 25, 25);
-                vertex(100, 100, 50);
-                vertex(100, 20, 20);
-                fill(map(i % 3, 0, 10, 0, 100), 30, 100, 20);
-                vertex(100, 0, 0);
-                vertex(100, 0, 0);
-                endShape();
-
-                rotateY(radians(360/numberOfTriangles));
-        }
-        popMatrix();
+    for (int i = 0; i < numberOfTriangles; i++) {
+        fill(map(i % 10, 0, 10, 0, 100), 30, 100);
+        beginShape(TRIANGLE_FAN);
+        vertex(150, 25, 25);
+        vertex(100, 100, 50);
+        vertex(100, 20, 20);
+        fill(map(i % 10, 0, 10, 0, 100), 100, 100, 20);
+        vertex(100, 0, 0);
+        vertex(100, 0, 0);
+        endShape();
+        rotateY(radians(360/numberOfTriangles));
+    }
 }
 </script>
 </body>

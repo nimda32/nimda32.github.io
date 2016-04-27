@@ -17,7 +17,12 @@ $(document).ready(function() {
         $('.modal-backdrop').click(function() {
             $('#gal').modal('hide');
         });
+
+        
+
     });
+
+
     //
 
 

@@ -13,12 +13,12 @@ $(document).ready(function() {
         $('#gal').modal('show');
         //pull work from work folder
 
-        // handles closing modal when focus lost
-        $('.modal-backdrop').click(function() {
-            $('#gal').modal('hide');
-        });
+        // // handles closing modal when focus lost
+        // $('.modal-backdrop').click(function() {
+        //     $('#gal').modal('hide');
+        // });
 
-        
+
 
     });
 

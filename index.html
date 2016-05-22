@@ -8,7 +8,6 @@
 <!-- SEO -->
 
 <!-- CSS -->
-
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
@@ -18,10 +17,10 @@
 <div class="wrapper">
   <div class="container-fluid">
 
-  <div class="row">
+  <div class="row-fluid">
     <!-- <div class="nav-bar-content"> -->
       <div class="col-lg-2 nav-bar">
-        <div class="row ">
+        <div class="row">
           <a href="/index.html">
             <h3 id="title">EDMUND DAO
               <div class="sub-title">A linux loving programmer</div>
@@ -52,85 +51,136 @@
         </div>
         <!-- </div> -->
   </div>
-    <div class="col-lg-6 graphic">
+    <div class="col-lg-8 graphic">
       <div id="gal" class="modal fade modal-content modal-lg" role="dialog">
-        <nav class="galnav">
-          <ul>
-            <li>
-              <input type="radio" name="btn" value="one"/>
-              <label for="btn" class="entypo-right-open-big"></label>
-              <figure>
-                <img src=""/>
+        <div class="work-wrapper">
 
-                <figcaption>
-                  <h4>Mobile Apps</h4>
-                  <nav role='navigation'>
-                    <p>Games, tools, and both!</p>
-                    <ul>
-                      <li><a href="#" class="entypo-facebook-squared"></a></li>
-                      <li><a href="#" class="entypo-twitter"></a></li>
-                      <li><a href="#" class="entypo-gplus"></a></li>
-                    </ul>
-                  </nav>
-                </figcaption>
-                <!-- <iframe src="http://mdo.github.io/code-guide/" id="info" class="iframe" name="info" seamless="" height="100%" width="100%" ></iframe> -->
-              </figure>
-            </li>
-            <li>
-              <input type="radio" name="btn" value="two" checked="checked"/>
-              <label for="btn" class="entypo-right-open-big"></label>
-              <figure>
-                <img src=""/>
-                <figcaption>
-                  <h4>Web Dev</h4>
-                  <nav role='navigation'>
-                    <p>share this with your friends</p>
-                    <ul>
-                      <li><a href="#" class="entypo-facebook-squared"></a></li>
-                      <li><a href="#" class="entypo-twitter"></a></li>
-                      <li><a href="#" class="entypo-gplus"></a></li>
-                    </ul>
-                  </nav>
-                </figcaption>
-              </figure>
-            </li>
-            <li>
-              <input type="radio" name="btn" value="three"/>
-              <label for="btn" class="entypo-right-open-big"></label>
-              <figure>
-                <img src=""/>
-                <figcaption>
-                  <h4>Tinkering</h4>
-                  <nav role='navigation'>
-                    <p>share this with your friends</p>
-                    <ul>
-                      <li><a href="#" class="entypo-facebook-squared"></a></li>
-                      <li><a href="#" class="entypo-twitter"></a></li>
-                      <li><a href="#" class="entypo-gplus"></a></li>
-                    </ul>
-                  </nav>
-                </figcaption>
-              </figure>
-            </li>
-            <li>
-              <input type="radio" name="btn" value="four"/>
-              <label for="btn" class="entypo-right-open-big"></label>
-              <figure>
-                <img src=""/>
-                <figcaption>
-                  <h4>Other</h4>
-                  <nav role='navigation'>
-                    <p>share this with your friends</p>
-                    <ul>
-                      <li><a href="#" class="entypo-facebook-squared"></a></li>
-                      <li><a href="#" class="entypo-twitter"></a></li>
-                      <li><a href="#" class="entypo-gplus"></a></li>
-                    </ul>
-                  </nav>
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
+        <nav class="galnav row-fluid">
+            <div class="col-lg-12 outlined">
+                <!-- <div class="col-lg-12 category-title">
+                  WEB
+                </div> -->
+                <div class="pull-right">
+                				<button class="btn btn-small btn-primary" data-toggle="portfilter" data-target="all">
+                					All
+                				</button>
+                				<button class="btn btn-small btn-primary" data-toggle="portfilter" data-target="art">
+                					Art
+                				</button>
+                				<button class="btn btn-small btn-primary" data-toggle="portfilter" data-target="media">
+                					Media
+                				</button>
+                				<button class="btn btn-small btn-primary" data-toggle="portfilter" data-target="brand">
+                					Brand
+                				</button>
+                			</div>
+                			<div class="clearfix"></div>
+
+                			<br/>
+
+                			<ul class="thumbnails gallery">
+                				<li class="span3 col-md-4 clearfix" data-tag='brand'>
+                					<div class="thumbnail">
+                						<img alt="270x170" src="http://placehold.it/270x170" />
+                						<div class="caption">
+                							<h4>Brand Project</h4>
+                						</div>
+                					</div>
+                				</li>
+                				<li class="span3 col-md-4" data-tag='art'>
+                					<div class="thumbnail" >
+                						<img alt="270x170" src="http://placehold.it/270x170" />
+                						<div class="caption">
+                							<h4>Art Project</h4>
+
+                						</div>
+                					</div>
+                				</li>
+                				<li class="span3 col-md-4" data-tag='media'>
+                					<div class="thumbnail">
+                						<img alt="270x170" src="http://placehold.it/270x170" />
+                						<div class="caption">
+                							<h4>Media Project</h4>
+
+                						</div>
+                					</div>
+                				</li>
+                				<li class="span3 col-md-4" data-tag='brand'>
+                					<div class="thumbnail">
+                						<img alt="270x170" src="http://placehold.it/270x170" />
+                						<div class="caption">
+                							<h4>Brand Project</h4>
+                						</div>
+                					</div>
+                				</li>
+                				<li class="span3 col-md-4" data-tag='art'>
+                					<div class="thumbnail" >
+                						<img alt="270x170" src="http://placehold.it/270x170" />
+                						<div class="caption">
+                							<h4>Art Project</h4>
+                						</div>
+                					</div>
+                				</li>
+                				<li class="span3 col-md-4" data-tag='media'>
+                					<div class="thumbnail">
+                						<img alt="270x170" src="http://placehold.it/270x170" />
+                						<div class="caption">
+                							<h4>Media Project</h4>
+                						</div>
+                					</div>
+                				</li>
+                				<li class="span3 col-md-4 clearfix" data-tag='brand'>
+                					<div class="thumbnail">
+                						<img alt="270x170" src="http://placehold.it/270x170" />
+                						<div class="caption">
+                							<h4>Brand Project</h4>
+                						</div>
+                					</div>
+                				</li>
+                				<li class="span3 col-md-4" data-tag='art'>
+                					<div class="thumbnail">
+                						<img alt="270x170" src="http://placehold.it/270x170" />
+                						<div class="caption">
+                							<h4>Art Project</h4>
+                						</div>
+                					</div>
+                				</li>
+                				<li class="span3 col-md-4" data-tag='art'>
+                					<div class="thumbnail">
+                						<img alt="270x170" src="http://placehold.it/270x170" />
+                						<div class="caption">
+                							<h4>Art Project</h4>
+                						</div>
+                					</div>
+                				</li>
+                				<li class="span3 col-md-4"  data-tag='brand'>
+                					<div class="thumbnail">
+                						<img alt="270x170" src="http://placehold.it/270x170" />
+                						<div class="caption">
+                							<h4>Brand Project</h4>
+                						</div>
+                					</div>
+                				</li>
+                				<li class="span3 col-md-4"  data-tag='brand'>
+                					<div class="thumbnail">
+                						<img alt="270x170" src="http://placehold.it/270x170" />
+                						<div class="caption">
+                							<h4>Brand Project</h4>
+                						</div>
+                					</div>
+                				</li>
+                				<li class="span3 col-md-4" data-tag='brand'>
+                					<div class="thumbnail" >
+                						<img alt="270x170" src="http://placehold.it/270x170" />
+                						<div class="caption">
+                							<h4>Brand Project</h4>
+                						</div>
+                					</div>
+                				</li>
+                			</ul>
+                			<div class="push"></div>
+            </div>
+            </div>
         </nav>
       </div>
       <canvas id="mycanvas" class="btn">
@@ -152,6 +202,7 @@ folder and simple grouped bootstrap display-->
 <script type="text/javascript" src="js/jquery2.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/processing.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-portfilter.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <!-- src="js/homepage_graphic.js" -->
 <script type="text/processing" data-processing-target="mycanvas" >

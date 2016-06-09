@@ -1,3 +1,4 @@
+
 import processing.opengl.*;
 // used for the changing color effect
 
@@ -92,7 +93,4 @@ void draw() {
     }
 
 }
-//
-// Ends Animation
-//
-//******************
+  // // Ends Animation // //******************

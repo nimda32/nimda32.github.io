@@ -14,9 +14,9 @@ $(document).ready(function() {
     //pull work from work folder
 
     // // handles closing modal when focus lost
-    // $('#mycanvas').click(function() {
-    //   $('#gal').modal('hide');
-    // });
+    $('#gal-backdrop').click(function() {
+      $('#gal').modal('hide');
+    });
 
   });
 });

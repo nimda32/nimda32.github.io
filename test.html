@@ -2,102 +2,154 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>portfolio: edmund dao</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+
+    <script type="text/javascript" src="js/jquery2.2.min.js"></script>
+    <script type="text/javascript" src="js/fullPage.min.js"></script>
+    <script type="text/javascript" src="js/processing.min.js"></script>
+
 </head>
 <style>
     body {
-        background-color: black !important;
+        background-color: black;
         color: white;
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
     }
 
-    .landing-wrapper {
-        -webkit-clip-path: url(#myClip);
-        -webkit-shape-outside: url(#myClip);
+    .intro-wrapper {
         position: absolute;
-        width: 50%;
-        height: 50%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-25vw, -25vh);
-        background-color: blue;
-        shape-margin: 20px;
-    }
-
-    landing-icon {
-        position: absolute;
-        -webkit-clip-path: url(#myClip);
-        -webkit-shape-outside: url(#myClip);
-        height: 200px;
-        width: 200px;
         top: 50%;
         left: 50%;
-        transform: translate(-100px, -100px);
+        background-color: green;
+        pointer-events: none;
+        width: 40%;
+        height: 40%;
+        transform: translate(-50%, -50%);
     }
 
-    img {
-        -webkit-clip-path: url(#myClip);
-        width: 200px;
-        height: 200px;
+    .intro-picture {
+        width: 40%;
+        height: 100%;
+        float: left;
+        background-color: red;
     }
+
+    ul.navbar {
+        z-index: 9999 !important;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: black;
+        position: fixed;
+        top: 0 !important;
+        width: 100%;
+    }
+
+    li.navbar {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 54px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.actives) {
+        background-color: #303030;
+    }
+
+    .actives {
+        background-color: #4CAF50;
+    }
+
 </style>
 
 <body>
+        <ul id="nav" class="navbar">
+            <li class="navbar" ><a class="actives" href="#home">Home</a></li>
+            <li class="navbar" ><a href="#news">News</a></li>
+            <li class="navbar" ><a href="#contact">Contact</a></li>
+            <li class="navbar" ><a href="#about">About</a></li>
+        </ul>
 
-    <div class="landing-wrapper">
-            <!-- Credit to: https://gist.github.com/DarekPobozniak/a2e8b9b9672cb3e8f0e2 -->
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <div class="intro-wrapper">
+                <div class="intro-picture">
+                    image placeholder
+                </div>
+                <div class="text-animation"></div>
+            </div>
+            <canvas id="mycanvas"></canvas>
 
-        <landing-icon>
-            <img src="https://pbs.twimg.com/profile_images/2586664217/o78k5fogx5g3hdy6peai.jpeg">
-        </landing-icon>
+        </div>
 
-        <svg width="0" height="0">
-            <defs>
-                <clipPath id="myClip" clipPathUnits="objectBoundingBox">
-                    <polygon points=".41,.02 .59,.02
-                             .91,.16 1,.33
-                             1,.66 .91,.83
-                             .59,.98 .41,.98
-                             .09,.83 0,.66
-                             0,.33 .09,.16
-                             " />
-
-                    <circle cx=".5" cy=".2" r=".2" />
-                    <!-- top -->
-                    <circle cx=".5" cy=".8" r=".2" />
-                    <!-- bottom -->
-                    <circle cx=".8" cy=".33" r=".2" />
-                    <!-- right top -->
-                    <circle cx=".8" cy=".66" r=".2" />
-                    <!-- right bottom -->
-                    <circle cx=".2" cy=".33" r=".2" />
-                    <!-- left top -->
-                    <circle cx=".2" cy=".66" r=".2" />
-                    <!-- left bottom -->
-                </clipPath>
-            </defs>
-        </svg>
-
-
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-            with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem
-            Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-            College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
-            ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
-            also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. Where can I get some? There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-            in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the
-            Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,
-            to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-    
+        <div class="section" id="section1">
+        </div>
+        <div class="section moveDown" id="section2">
+        </div>
+        <div class="section moveDown" id="section3">
+        </div>
     </div>
 
-</body>
+    <script>
+        $(document).ready(function() {
+          $('#fullpage').fullpage({
+                menu: '#nav',
+                navigation: true,
+        				navigationPosition: 'right'
+        	});
+        });
+    </script>
 
-<script>
-</script>
+    <script type="text/processing" data-processing-target="mycanvas">
+            //based on Michael Pinn's work http://www.openprocessing.org/user/39442
+            float num;
+
+            void setup(){
+              size(window.innerWidth, window.innerHeight);
+              smooth();
+              colorMode(HSB, 100, 100, 100, 100);
+              noStroke();
+            }
+
+            void draw()
+            {
+              if($('#section0').hasClass('active')){
+                fill(0, 10);
+                rect(0, 0, width, height);
+                scale(2);
+                translate(width/4, height/4);
+                /* Make mouseX values between 100 and 200. */
+                float maxX = map(mouseX, 0, width, 0, 200);
+                /* Change i+=1 to i+=2 for a simpler effect */
+                for(int i = 0; i < 360; i+=1){
+                  fill(random(105), 100, 100);
+                  float y = cos(i);
+                  float m = dist(sin(i)*maxX, y*maxX, sin(i)*(150+sin(i+num) * 50), y);
+                  float d = map(m, 0, 500, 1, 10);
+                  rect(sin(radians(i+maxX))*(150+sin(i+num) * 50), (150+sin(radians(i+num)) * 50), d, d);
+                  //ellipse(sin(radians(i+mouseX/10))*(10+sin(i-num) * 10), y*(10+sin(radians(i-num)) * 50), d/2, d/2);
+                  //  pushMatrix();
+                  //  fill(0,0,100);
+                  //  translate(-width/4, -height/4);
+                  //
+                  //  rect(random(width),random(height), random(i/300),random(i/300));
+                  //  popMatrix();
+                }
+                num += .01;
+              }
+            }
+    </script>
+
+</body>
 
 </html>

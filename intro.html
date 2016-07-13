@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 
     <script type="text/javascript" src="js/jquery2.2.min.js"></script>
-    <!-- <script type="text/javascript" src="js/fullPage.min.js"></script> -->
     <script type="text/javascript" src="js/processing.min.js"></script>
 
 </head>
@@ -19,50 +18,12 @@
         margin: 0;
         height: 100vh;
         width: 100vw;
-        overflow-x: hidden;
+        overflow: hidden;
     }
-
-    .intro-wrapper {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background-color: green;
-        pointer-events: none;
-        width: 40%;
-        height: 40%;
-        transform: translate(-50%, -50%);
-    }
-
-    .intro-picture {
-        width: 40%;
-        height: 100%;
-        float: left;
-        background-color: red;
-    }
-
 </style>
 
 <body>
-            <!-- <div class="intro-wrapper">
-                <div class="intro-picture">
-                    image placeholder
-                </div>
-                <div class="text-animation"></div>
-            </div> -->
-            <canvas id="mycanvas"></canvas>
-
-    </div>
-
-    <script>
-        $(document).ready(function() {
-          $('#fullpage').fullpage({
-                menu: '#nav',
-                navigation: true,
-        				navigationPosition: 'right',
-                recordHistory: true
-        	});
-        });
-    </script>
+    <canvas id="mycanvas"></canvas>
 
     <script type="text/processing" data-processing-target="mycanvas">
             //based on Michael Pinn's work http://www.openprocessing.org/user/39442
@@ -75,7 +36,6 @@
             void setup(){
               size(window.innerWidth, window.innerHeight);
               smooth();
-              colorMode(HSB, 100, 100, 100, 100);
               noStroke();
 
               lines = new ArrayList<PVector>();
@@ -124,56 +84,26 @@
               }
                 a = lines.get(count++);
                 b = lines.get(count++);
-                fill(0);
-                rect(0,0,width,height);
+                background(0);
 
             }
+
             void draw()
             {
-              if(true){
-                fill(0, 15);
-                rect(0, 0, width, height);
+              stroke(255);
+              strokeWeight(6);
+              fill(255);
+              count++;
+              if(count < lines.size()){
+                a = b;
 
-                scale(2);
-                translate(width/4, height/4);
-                /* Make mouseX values between 100 and 200. */
-                float maxX = map(mouseX, 0, width, 0, 200);
-                for(int i = 0; i < 360; i++){
-                  float s = (150+sin(i+num) * 50);
-                  float si = sin(i);
-                  fill(random(105), 100, 100);
-                  float y = cos(i);
-                  float m = dist(si*maxX, y*maxX, si*s, y);
-                  float d = map(m, 0, 500, 1, 10);
-                  ellipse(sin(radians(i+maxX))*s, (150+sin(radians(i+num)) * 50), d, d);
-                  //ellipse(sin(radians(i+mouseX/10))*(10+sin(i-num) * 10), y*(10+sin(radians(i-num)) * 50), d/2, d/2);
-                  //  pushMatrix();
-                  //  fill(0,0,100);
-                  //  translate(-width/4, -height/4);
-                  //
-                  //  rect(random(width),random(height), random(i/300),random(i/300));
-                  //  popMatrix();
+                if (count < lines.size()) {
+                  b = lines.get(count++);
                 }
-                num += .01;
-              }else if($('#section1').hasClass('active')){
-                // fill(0,100,0);
-                // if(count < lines.size()){
-                //   a = b;
-                //
-                //   if (count < lines.size()) {
-                //     b = lines.get(count++);
-                //   }
-                //
-                //   if (b.x != -9999 && a.x !=-9999) {
-                //     fill(0,0,100);
-                //     stroke(0,0,100);
-                //     // strokeWeight(4);
-                //     line(a.x, a.y, b.x, b.y);
-                //     noStroke();
-                //   }
-                // }
-                //
 
+                if (b.x != -9999 && a.x !=-9999) {
+                  line(a.x, a.y, b.x, b.y);
+                }
               }
             }
 

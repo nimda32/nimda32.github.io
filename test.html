@@ -22,23 +22,6 @@
         overflow-x: hidden;
     }
 
-    .intro-wrapper {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background-color: green;
-        pointer-events: none;
-        width: 40%;
-        height: 40%;
-        transform: translate(-50%, -50%);
-    }
-
-    .intro-picture {
-        width: 40%;
-        height: 100%;
-        float: left;
-        background-color: red;
-    }
 
 </style>
 
@@ -75,7 +58,7 @@
             void setup(){
               size(window.innerWidth, window.innerHeight);
               smooth();
-              colorMode(HSB, 100, 100, 100, 100);
+              colorMode(HSB,100,100,100,100,100);
               noStroke();
 
               lines = new ArrayList<PVector>();

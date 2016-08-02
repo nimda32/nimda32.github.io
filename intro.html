@@ -3,10 +3,11 @@
 
 <head>
 
-  <!-- icon with mouse hover animation: http://codepen.io/upslon/pen/mEJyb -->
+  <!-- icon with mouse hover animation from: http://codepen.io/upslon/pen/mEJyb -->
+  <!-- laptop drawing from: -->
 
   <meta charset="UTF-8">
-  <title>portfolio: edmund dao</title>
+  <title>Edmund Dao's CV</title>
   <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 
   <script type="text/javascript" src="js/jquery2.2.min.js"></script>
@@ -103,7 +104,7 @@
     bottom: 0;
     width: 100%;
     text-align: center;
-    height: 93px;
+    height: 140px;
     margin-left: 23px;
     /*display: table;*/
     /*border-top: 1px solid #e1e1e1;*/
@@ -249,7 +250,6 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 70px;
     z-index: 999;
   }
 
@@ -266,10 +266,26 @@
     font-size: 20px;
   }
 
-  .big {
-    width: 100px;
-    height: 3000px;
+  .spacer {
+    width: 1px;
+    height: 200px;
   }
+  /* about me */
+  .about-wrapper{
+    width: 100%;
+    height: 700px;
+  }
+  .about{
+    /*height: 500px;
+    width: 500px;*/
+    /*background-color: black;*/
+    border-radius: 15px;
+    margin: auto;
+  }
+  .image-rounded{
+   border-radius: 50%;
+  }
+
 </style>
 
 <body>
@@ -295,25 +311,25 @@
       <a class="footer-nav-mail" data-color="#007bb3" href="#">
         <span></span>
       </a>
-      <!-- needs spacing
-    		-->
       <a class="footer-nav-instagram" data-color="#c3b3a0" href="#">
         <span></span>
       </a>
-      <!-- needs spacing
-    		-->
       <a class="footer-nav-github" data-color="#ea4c89" href="#">
         <span></span>
       </a>
-      <!-- needs spacing
-    		-->
       <a class="footer-nav-linkedin" data-color="#afafaf" href="#">
         <span></span>
       </a>
     </div>
   </div>
 
-  <div class="big"></div>
+  <div class="spacer"></div>
+
+  <div class="about-wrapper">
+    <div class="about">
+      <image class="image-rounded" src="images/me.jpg"></image>
+    </div>
+  </div>
 
 
   <script type="text/processing" data-processing-target="intro">

@@ -7,7 +7,7 @@
   <!-- laptop drawing from: -->
 
   <meta charset="UTF-8">
-  <title>Edmund Dao's CV</title>
+  <title>Edmund Dao</title>
   <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 
   <script type="text/javascript" src="js/jquery2.2.min.js"></script>
@@ -32,10 +32,10 @@
     /*color: #fff;*/
     font-family: 'open-sans-bold', AvenirNext-Medium, sans-serif;
     font-size: 18px;
+    color: white;
   }
 
   #intro {
-    /*border: 2px solid white;*/
     /* will be old windows 5 window manager */
     width: 100%;
     height: 100%;
@@ -99,16 +99,13 @@
   }
 
   #foot {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    height: 140px;
+    /*position: absolute;*/
     margin-left: 23px;
     /*display: table;*/
     /*border-top: 1px solid #e1e1e1;*/
-    /**zoom: 3;*/
+    fill:white !important;
+    stroke:white !important;
+    height: 75px;
     -webkit-transition: all 500ms ease-out;
     -moz-transition: all 500ms ease-out;
     -ms-transition: all 500ms ease-out;
@@ -254,6 +251,7 @@
   }
 
   nav li {
+    border: 1px solid white;
     display: inline-block;
     padding: 24px 10px;
   }
@@ -262,7 +260,6 @@
     text-transform: uppercase;
     color: white;
     text-decoration: none;
-    border: 1px solid white;
     font-size: 20px;
   }
 
@@ -270,20 +267,43 @@
     width: 1px;
     height: 200px;
   }
+
   /* about me */
   .about-wrapper{
     width: 100%;
     height: 700px;
   }
   .about{
-    /*height: 500px;
-    width: 500px;*/
-    /*background-color: black;*/
-    border-radius: 15px;
+    margin-top: 30px;
+    width: 40%;
     margin: auto;
+    /*background-image: url(images/vim.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;*/
+    min-width: 400px;
+
+    /*box-shadow: 1px 1px 10px 1px lightgrey;*/
   }
   .image-rounded{
    border-radius: 50%;
+   box-shadow: 1px 1px 20px 1px grey;
+   margin-bottom: 25px;
+  }
+
+  .about > h1{
+    /*text-shadow: 3px 2px grey;*/
+  }
+  .about-text{
+    float:right;
+    margin: 15px;
+    margin-right: 50px;
+  }
+
+  .about-text > p {
+    max-width: 300px;
+    /*min-width: 200px;*/
+
   }
 
 </style>
@@ -306,29 +326,41 @@
     </ul>
   </nav>
 
-  <div id="foot">
-    <div class="footer-nav">
-      <a class="footer-nav-mail" data-color="#007bb3" href="#">
-        <span></span>
-      </a>
-      <a class="footer-nav-instagram" data-color="#c3b3a0" href="#">
-        <span></span>
-      </a>
-      <a class="footer-nav-github" data-color="#ea4c89" href="#">
-        <span></span>
-      </a>
-      <a class="footer-nav-linkedin" data-color="#afafaf" href="#">
-        <span></span>
-      </a>
-    </div>
-  </div>
+
 
   <div class="spacer"></div>
 
   <div class="about-wrapper">
+
     <div class="about">
+      <h1><i>I'm Edmund</i></h1>
       <image class="image-rounded" src="images/me.jpg"></image>
+      <div class="about-text">
+        <h4></h4>
+        <p>I'm a software developer that makes pretty sweet stuff. <br><br>
+          I enjoy long strolls on virtual beaches and saying "Ok Google" loudly in public.
+          <br> <br><i><u>Find my resume here.</u></i>
+        </p>
+      </div>
+
+      <div id="foot">
+        <div class="footer-nav">
+          <a class="footer-nav-mail" data-color="#007bb3" href="#">
+            <span></span>
+          </a>
+          <a class="footer-nav-instagram" data-color="#c3b3a0" href="#">
+            <span></span>
+          </a>
+          <a class="footer-nav-github" data-color="#ea4c89" href="#">
+            <span></span>
+          </a>
+          <a class="footer-nav-linkedin" data-color="#afafaf" href="#">
+            <span></span>
+          </a>
+        </div>
+      </div>
     </div>
+
   </div>
 
 
